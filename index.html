@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="css/materialized.css"  media="screen,projection"/>
+  <!--Import skeleton.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
 
   <!-- Import custom syles -->
   <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
@@ -14,36 +14,42 @@
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+  <!-- Import Roboto font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
   <!-- Link to firebase here -->
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/bin/materialize.min.js"></script>
 
   <!-- Link to our own JS here -->
+  <script type="text/javascript" src="js/app/logic.js"></script>
+
 
   <title>Document</title>
 </head>
 <body>
-  <nav>
-    <div class="container">
-      <div class="navbar-fixed">
-        <div class="nav-wrapper">
-          <!-- <form class=" right nav-search">
-              <input id="search" type="search">
-          </form> -->
-          <form class="right nav-search">
-            <input>
-          </form>
-          <a href="#" class="brand-logo">Logo</a>
-          <ul id="nav-mobile" class=" right hide-on-med-and-down s6">
-            <li><a href="#">Films</a></li>
-            <li><a href="#">My Lists</a></li>
-            <li><a href="#">Sign In</a></li>
-          </ul>
+  <div class="row">
+    <div class="jumbotron u-full-max-width">
+      <div class="container">
+        <div class="row">
+          <nav>
+            <a href="#" class="u-pull-left" id="logo">LOGO</a>
+            <form>
+              <div class="row">
+                <div class="three columns u-pull-right">
+                <input class="u-full-width" type="search" placeholder="search..." id="search">
+              </div>
+            </form>
+            <ul class="nav-items">
+              <li class="u-pull-right"><a href="#">Films</a></li>
+              <li class="u-pull-right"><a href="#">My List</a></li>
+              <li class="u-pull-right"><a href="#">Sign In</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
-  </nav>
+  </div>
 </body>
 </html>
