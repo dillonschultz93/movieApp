@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAOA,UAAW;EACT,gBAAgB,ECRF,OAAO;EDSrB,MAAM,EAAE,KAAK;;AAIf,GAAI;EACF,gBAAgB,ECdF,OAAO;;ADiBvB,wBAAyB;EACvB,gBAAgB,EChBV,IAAI;EDiBV,MAAM,EEjBC,iBAAiB;EFkBxB,aAAa,EEhBN,IAAI;EFiBX,WAAW,EGrBE,6CAA6C;EHsB1D,OAAO,EAAE,MAAM",
+"mappings": "AAOA,IAAK;EACH,MAAM,EAAE,GAAG;;AAGb,IAAK;EACH,MAAM,EAAE,GAAG;;AAIb,UAAW;EACT,gBAAgB,ECjBF,OAAO;EDkBrB,MAAM,EAAE,KAAK;;AAIf,GAAI;EACF,gBAAgB,ECvBF,OAAO;EDwBrB,cAAc,EAAE,MAAM;;AAKxB,aAAc;EACZ,eAAe,EAAE,IAAI;EACrB,MAAM,EAAE,QAAQ;;AAGlB,YAAa;EACX,eAAe,EAAE,IAAI;;AAGvB,wBAAyB;EACvB,MAAM,EErCC,iBAAiB;EFsCxB,aAAa,EEpCN,IAAI;EFqCX,WAAW,EGzCE,6CAA6C;EH0C1D,OAAO,EAAE,MAAM;EACf,WAAW,EAAE,IAAI",
 "sources": ["../scss/style.scss","../scss/components/_colors.scss","../scss/components/_search-input.scss","../scss/components/_typography.scss"],
 "names": [],
 "file": "style.css"
