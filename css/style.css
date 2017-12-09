@@ -5,16 +5,11 @@
 nav {
   background-color: #E1F2FD; }
 
-.nav-search {
+.nav-search input#search {
+  background-color: #fff;
   border: 2px solid #1CA5F7;
   border-radius: 50px;
-  height: 50px;
-  outline: none;
-  width: 25%;
-  margin-left: 20px;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   padding: 0 20px; }
-
-input {
-  border-bottom: none; }
 
 /*# sourceMappingURL=style.css.map */
