@@ -1,0 +1,22 @@
+// Imports ====================================================================
+@import "user-components/_search-input";
+@import "user-components/_colors";
+
+// == Navbar overrides ========================================================
+nav {
+  background-color: $primary-color;
+}
+
+.nav-search {
+  border: $border;
+  border-radius: $radius;
+  height: 50px;
+  outline: none;
+  width: $width;
+  margin-left: 20px;
+  padding: 0 20px;
+}
+
+input {
+  border-bottom: none;
+}
