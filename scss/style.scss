@@ -4,6 +4,15 @@
 @import "components/_colors";
 @import "components/normalize";
 
+// == Body styles =============================================================
+html {
+  margin: 0px;
+}
+
+body {
+  margin: 0px;
+}
+
 // == Jumbotron styles ========================================================
 .jumbotron {
   background-color: $primary-color;
@@ -13,12 +22,24 @@
 // == Navbar overrides ========================================================
 nav {
   background-color: $primary-color;
+  vertical-align: middle;
+}
+
+
+
+.nav-items li {
+  list-style-type: none;
+  margin: 0px 20px;
+}
+
+.nav-items a {
+  text-decoration: none;
 }
 
 .nav-search input#search {
-  background-color: $white;
   border: $border;
   border-radius: $radius;
   font-family: $primary-font;
   padding: 0 20px;
+  margin-left: 20px;
 }
