@@ -1,6 +1,14 @@
 // Imports ====================================================================
-@import "user-components/_search-input";
-@import "user-components/_colors";
+@import "components/_typography";
+@import "components/_search-input";
+@import "components/_colors";
+@import "components/normalize";
+
+// == Jumbotron styles ========================================================
+.jumbotron {
+  background-color: $primary-color;
+  height: 500px;
+}
 
 // == Navbar overrides ========================================================
 nav {
