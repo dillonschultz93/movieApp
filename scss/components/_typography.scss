@@ -1,16 +1,19 @@
 $primary-font: "Roboto", "Helvetica Neue", Arial, sans-serif; // font-family
 
 // == Sizing ==================================================================
-$primary-size: 14px; //used for primary text
 $heading-size: 50px; // used for headings
 $subheading-size: 30px; //used for subheadings
 $jumbotron-title: 72px; // used for the jumbotron heading
 
+$primary-size: 14px; //used for primary text
+$small-size: 12px; //used for small type
+$large-size: 16px; //used for larger type
+
 
 // == Weight ==================================================================
-$primary-weight: 400px; //regular weight
-$light-weight: 300px; // light weight
-$heavy-weight: 700px; // bold weight
+$primary-weight: 400; //regular weight
+$light-weight: 300; // light weight
+$heavy-weight: 700; // bold weight
 
 // == Letter Spacing ==========================================================
 $primary-spacing: -0.03em; // spacing for primary text
