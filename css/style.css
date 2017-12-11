@@ -5,25 +5,65 @@ body {
   margin: 0px; }
 
 .jumbotron {
+  align-content: space-between;
   background-color: #E1F2FD;
-  height: 500px; }
+  display: flex;
+  height: 500px;
+  margin-top: 0px; }
 
-nav {
+.nav {
   background-color: #E1F2FD;
-  vertical-align: middle; }
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px; }
+  .nav .nav-items li {
+    color: #1CA5F7;
+    display: inline;
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    list-style-type: none;
+    margin: 0px 10px; }
+  .nav .nav-items a {
+    color: #1CA5F7;
+    text-decoration: none; }
+  .nav .nav-search {
+    background-color: #E1F2FD;
+    border: 2px solid #1CA5F7;
+    border-radius: 50px;
+    color: #1CA5F7;
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px; }
 
-.nav-items li {
-  list-style-type: none;
-  margin: 0px 20px; }
+.tagline {
+  color: #1CA5F7;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.03em; }
 
-.nav-items a {
-  text-decoration: none; }
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px; }
 
-.nav-search input#search {
+.button {
+  background-color: #1CA5F7;
   border: 2px solid #1CA5F7;
   border-radius: 50px;
+  color: #fff;
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
-  padding: 0 20px;
-  margin-left: 20px; }
+  font-size: 14px;
+  font-weight: 300px;
+  margin: 0 auto; }
+  .button:hover {
+    background-color: #E1F2FD;
+    border: 2px solid #1CA5F7;
+    color: #1CA5F7; }
+
+.subheading {
+  color: #1CA5F7;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  margin-top: 100px; }
 
 /*# sourceMappingURL=style.css.map */
