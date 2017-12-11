@@ -1,7 +1,5 @@
-html {
-  margin: 0px; }
-
-body {
+html, body {
+  height: 100%;
   margin: 0px; }
 
 .jumbotron {
@@ -48,22 +46,47 @@ body {
   margin-top: 50px; }
 
 .button {
-  background-color: #1CA5F7;
+  background-color: transparent;
   border: 2px solid #1CA5F7;
   border-radius: 50px;
-  color: #fff;
+  color: #1CA5F7;
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: 14px;
-  font-weight: 300px;
+  font-weight: 300;
   margin: 0 auto; }
   .button:hover {
-    background-color: #E1F2FD;
+    background-color: #1CA5F7;
     border: 2px solid #1CA5F7;
-    color: #1CA5F7; }
+    color: #fff; }
 
 .subheading {
   color: #1CA5F7;
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   margin-top: 100px; }
+
+.poster-container {
+  display: flex; }
+
+.image-container img {
+  width: 100%;
+  height: 100%; }
+
+.push, footer {
+  height: 50px; }
+
+footer {
+  align-content: center;
+  align-items: center;
+  background-color: #E1F2FD;
+  display: flex;
+  justify-content: center; }
+
+.footer-content {
+  color: #1CA5F7;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 0; }
 
 /*# sourceMappingURL=style.css.map */

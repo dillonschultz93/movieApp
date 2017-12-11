@@ -5,15 +5,14 @@
 @import "components/normalize";
 
 // == Body styles =============================================================
-html {
-  margin: 0px;
-}
 
-body {
+html, body {
+  height: 100%;
   margin: 0px;
 }
 
 // == Jumbotron styles ========================================================
+
 .jumbotron {
   align-content: space-between;
   background-color: $primary-color;
@@ -23,6 +22,7 @@ body {
 }
 
 // == Navbar overrides ========================================================
+
 .nav {
   background-color: $primary-color;
   display: flex;
@@ -71,24 +71,61 @@ body {
 }
 
 .button {
-  background-color: $accent-color;
+  background-color: transparent;
   border: $border;
   border-radius: $radius;
-  color: $white;
+  color: $accent-color;
   font-family: $primary-font;
   font-size: $primary-size;
   font-weight: $light-weight;
   margin: 0 auto;
 
   &:hover {
-    background-color: $primary-color;
+    background-color: $accent-color;
     border: $border;
-    color: $accent-color;
+    color: $white;
   }
 }
+
 // == Main content ============================================================
+
 .subheading {
   color: $accent-color;
   font-family: $primary-font;
   margin-top: 100px;
+}
+
+.poster-container {
+  display: flex;
+}
+
+.image-container {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// == Footer ==================================================================
+
+.push, footer {
+  height: 50px;
+}
+
+footer {
+  align-content: center;
+  align-items: center;
+  background-color: $primary-color;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  color: $accent-color;
+  font-family: $primary-font;
+  font-size: $small-size;
+  font-weight: $primary-weight;
+  text-align: center;
+  margin-bottom: 0;
+
 }
