@@ -2,7 +2,7 @@ html, body {
   height: 100%;
   margin: 0px; }
 
-.columns:nth-child(5) {
+.three.columns:nth-of-type(4n+5) {
   margin-left: 0; }
 
 .jumbotron {
