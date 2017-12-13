@@ -26,11 +26,12 @@ html, body {
 // == Jumbotron styles ========================================================
 
 .jumbotron {
-  align-content: space-between;
+  // align-content: space-between;
   background-color: $primary-color;
-  display: flex;
+  // display: flex;
   height: 500px;
   margin-top: 0px;
+  padding: 20px;
 }
 
 // == Navbar overrides ========================================================
@@ -38,8 +39,7 @@ html, body {
 .nav {
   background-color: $primary-color;
   display: flex;
-  justify-content: flex-end;
-  margin-top: 10px;
+  justify-content: flex-end;;
 
   .nav-items li {
     color: $accent-color;
@@ -125,7 +125,7 @@ html, body {
   position: absolute;
   visibility: hidden;
   width: 20%;
-  z-index: 9;
+  z-index: 8;
 
   .list-button {
     background-color: white;
@@ -169,6 +169,91 @@ html, body {
       filter: blur(2px);
     }
   }
+}
+
+// == Modal styling ===========================================================
+
+.modal {
+  background-color: $white;
+  border: $border;
+  border-radius: $small-radius;
+  display: none;
+  left: 50%;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(-50%,-50%,0);
+  width: 60%;
+  z-index: 10;
+}
+
+.close {
+  border-radius: 100%;
+  color: $accent-color;
+}
+
+.modal-heading {
+  color: $accent-color;
+  font-family: $primary-font;
+  font-weight: $heavy-weight;
+}
+
+hr {
+  border: 1px solid $accent-color;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.list-container {
+
+  a {
+    text-decoration: none;
+  }
+
+  .list-item {
+    border-bottom: 1px solid $gray;
+    color: $black;
+    font-family: $primary-font;
+    font-size: $extra-lg-size;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+
+    &:hover {
+      background-color: $accent-color;
+      border-bottom: 1px solid $accent-color;
+      color: $white;
+    }
+  }
+}
+
+.new-list {
+  font-family: $primary-font;
+  text-align: center;
+}
+
+.modal-overlay {
+
+  background-color: $black;
+  display: none;
+  opacity: 0.6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+}
+
+.modal-open {
+  animation-duration: 0.4s;
+  animation-name: fade-animation;
+  display: block;
+}
+
+.overlay-open {
+  display: block;
 }
 
 // == Footer ==================================================================

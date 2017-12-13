@@ -29,3 +29,18 @@
   backface-visibility: visible !important;
   animation-name: flip-animation;
 }
+
+
+@keyframes fade-animation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-animation {
+  animation-name: fade-animation;
+}

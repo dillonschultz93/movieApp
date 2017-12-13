@@ -24,36 +24,32 @@
 
   <!-- Link to our own JS here -->
   <script type="text/javascript" src="js/app/logic.js"></script>
+  <script type="text/javascript" src="js/app/modal.js"></script>
 
 
   <title>Document</title>
 </head>
 <body>
   <!-- jumbotron starts here -->
-  <div class="row">
-    <div class="jumbotron">
-      <div class="container">
-        <!-- Navbar starts here -->
-        <div class="row">
-          <div class="nav">
-            <div class="logo u-pull-left"></div>
-            <ul class="nav-items">
-              <li><a href="#">FILMS</a></li>
-              <li><a href="#">MY LIST</a></li>
-              <li><a href="#">SIGN IN</a></li>
-              <li>
-                <input type="search" id="search" placeholder="Search..." class="nav-search">
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-            <h1 class="tagline">Lorem Ipsum <br> Dolar Sit Amet</h1>
-        </div>
-        <div class="row btn-container">
-          <button class="call-button" href="#" id="call-to-action">Start A List</button>
-        </div>
+  <div class="jumbotron">
+    <div class="row">
+      <div class="nav">
+        <div class="logo u-pull-left"></div>
+        <ul class="nav-items">
+          <a href="#"><li>FILMS</li></a>
+          <a href="#"><li>MY LISTS</li></a>
+          <a href="#"><li>SIGN IN</li></a>
+          <li>
+            <input type="search" placeholder="Search..." class="nav-search" id="search">
+          </li>
+        </ul>
       </div>
+    </div>
+    <div class="row">
+      <h1 class="tagline">Lorem Ipsum<br>Dolar Sit Amet</h1>
+    </div>
+    <div class="row btn-container">
+      <button class="call-button" href="#" id="call-to-action">Start A List</button>
     </div>
   </div>
   <!-- Page's main content starts here -->
@@ -66,7 +62,49 @@
       <div class="three columns image-container">
         <div class="action-buttons">
           <button class="list-button">ADD TO "WATCHED LIST"</button>
-          <button class="list-button">ADD TO A LIST</button>
+          <button class="list-button open-modal">ADD TO A LIST</button>
+        </div>
+        <img src="http://placehold.it/200x300" alt="">
+      </div>
+      <div class="three columns image-container">
+        <div class="action-buttons">
+          <button class="list-button">ADD TO "WATCHED LIST"</button>
+          <button class="list-button open-modal">ADD TO A LIST</button>
+        </div>
+        <img src="http://placehold.it/200x300" alt="">
+      </div>
+      <div class="three columns image-container">
+        <div class="action-buttons">
+          <button class="list-button">ADD TO "WATCHED LIST"</button>
+          <button class="list-button open-modal">ADD TO A LIST</button>
+        </div>
+        <img src="http://placehold.it/200x300" alt="">
+      </div>
+      <div class="three columns image-container">
+        <div class="action-buttons">
+          <button class="list-button">ADD TO "WATCHED LIST"</button>
+          <button class="list-button open-modal">ADD TO A LIST</button>
+        </div>
+        <img src="http://placehold.it/200x300" alt="">
+      </div>
+      <div class="three columns image-container">
+        <div class="action-buttons">
+          <button class="list-button">ADD TO "WATCHED LIST"</button>
+          <button class="list-button open-modal">ADD TO A LIST</button>
+        </div>
+        <img src="http://placehold.it/200x300" alt="">
+      </div>
+      <div class="three columns image-container">
+        <div class="action-buttons">
+          <button class="list-button">ADD TO "WATCHED LIST"</button>
+          <button class="list-button open-modal">ADD TO A LIST</button>
+        </div>
+        <img src="http://placehold.it/200x300" alt="">
+      </div>
+      <div class="three columns image-container">
+        <div class="action-buttons">
+          <button class="list-button">ADD TO "WATCHED LIST"</button>
+          <button class="list-button open-modal">ADD TO A LIST</button>
         </div>
         <img src="http://placehold.it/200x300" alt="">
       </div>
@@ -77,48 +115,18 @@
         </div>
         <img src="http://placehold.it/200x300" alt="">
       </div>
-      <div class="three columns image-container">
-        <div class="action-buttons">
-          <button class="list-button">ADD TO "WATCHED LIST"</button>
-          <button class="list-button">ADD TO A LIST</button>
-        </div>
-        <img src="http://placehold.it/200x300" alt="">
+      <!-- Modal starts here -->
+      <div class="modal" id="modal">
+          <a href="#close" title="Close" class="close u-pull-right" id="close-btn"><i class="material-icons">close</i></a>
+          <h2 class="modal-heading">Add To List...</h2>
+          <hr>
+          <ul class="list-container">
+            <a href="#"><li class="list-item">List #1</li></a>
+            <a href="#"><li class="list-item">List #2</li></a>
+          </ul>
+          <a href="#" class="new-list" id="make-list">Make a new list</a>
       </div>
-      <div class="three columns image-container">
-        <div class="action-buttons">
-          <button class="list-button">ADD TO "WATCHED LIST"</button>
-          <button class="list-button">ADD TO A LIST</button>
-        </div>
-        <img src="http://placehold.it/200x300" alt="">
-      </div>
-      <div class="three columns image-container">
-        <div class="action-buttons">
-          <button class="list-button">ADD TO "WATCHED LIST"</button>
-          <button class="list-button">ADD TO A LIST</button>
-        </div>
-        <img src="http://placehold.it/200x300" alt="">
-      </div>
-      <div class="three columns image-container">
-        <div class="action-buttons">
-          <button class="list-button">ADD TO "WATCHED LIST"</button>
-          <button class="list-button">ADD TO A LIST</button>
-        </div>
-        <img src="http://placehold.it/200x300" alt="">
-      </div>
-      <div class="three columns image-container">
-        <div class="action-buttons">
-          <button class="list-button">ADD TO "WATCHED LIST"</button>
-          <button class="list-button">ADD TO A LIST</button>
-        </div>
-        <img src="http://placehold.it/200x300" alt="">
-      </div>
-      <div class="three columns image-container">
-        <div class="action-buttons">
-          <button class="list-button">ADD TO "WATCHED LIST"</button>
-          <button class="list-button">ADD TO A LIST</button>
-        </div>
-        <img src="http://placehold.it/200x300" alt="">
-      </div>
+      <div class="modal-overlay" id="modal-overlay"></div>
     </div>
   </div>
   <!-- .push div is used to make the sticky footer -->

@@ -1,6 +1,7 @@
 $primary-font: "Roboto", "Helvetica Neue", Arial, sans-serif; // font-family
 
 // == Sizing ==================================================================
+// --------------------------- specific sizes ---------------------------------
 $heading-size: 50px; // used for headings
 $subheading-size: 30px; //used for subheadings
 $jumbotron-title: 72px; // used for the jumbotron heading
@@ -9,6 +10,7 @@ $primary-size: 14px; //used for primary text
 $small-size: 12px; //used for small type
 $large-size: 16px; //used for larger type
 $extra-sm-size: 10px; // used for the buttons on hover effects
+$extra-lg-size: 24px; // used for the list items in the modal
 
 
 // == Weight ==================================================================
