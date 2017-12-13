@@ -18,13 +18,27 @@
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/bin/materialize.min.js"></script>
 
   <!-- Link to our own JS here -->
 
   <title>Document</title>
 </head>
 <body>
+<div id="movie-view"></div>
+<form id="movie-form">
+      <label for="movie-input">Search for a movie</label>
+      <input type="text" id="movie-input"><br>
 
+      <!-- This button will trigger our AJAX call -->
+      <input id="find-movie" type="submit" value="Movie Search">
+    </form>
+
+
+
+
+
+
+<script type="text/javascript" src="js/app/logic.js"></script>
 </body>
 </html>
