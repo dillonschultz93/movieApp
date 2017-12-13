@@ -3,6 +3,7 @@
 @import "components/_typography";
 @import "components/_search-input";
 @import "components/_colors";
+@import "components/_animation";
 @import "components/normalize";
 
 // VARIABLES ==================================================================
@@ -119,10 +120,12 @@ html, body {
   display: flex;
   flex-direction: column;
   height: 20%;
+  opacity: 0.8;
   padding: 4px;
   position: absolute;
   visibility: hidden;
   width: 20%;
+  z-index: 9;
 
   .list-button {
     background-color: white;
@@ -158,6 +161,12 @@ html, body {
   &:hover { // when the user hovers over the poster image show the hidden buttons
     .action-buttons {
       visibility: visible;
+        animation-duration: 0.4s;
+        animation-name: flip-animation;
+    }
+
+    img {
+      filter: blur(2px);
     }
   }
 }
