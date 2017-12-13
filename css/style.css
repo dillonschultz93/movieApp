@@ -18,6 +18,14 @@
   backface-visibility: visible !important;
   animation-name: flip-animation; }
 
+@keyframes fade-animation {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.fade-animation {
+  animation-name: fade-animation; }
+
 html, body {
   height: 100%;
   margin: 0px; }
@@ -26,17 +34,15 @@ html, body {
   margin-left: 0; }
 
 .jumbotron {
-  align-content: space-between;
   background-color: #E1F2FD;
-  display: flex;
   height: 500px;
-  margin-top: 0px; }
+  margin-top: 0px;
+  padding: 20px; }
 
 .nav {
   background-color: #E1F2FD;
   display: flex;
-  justify-content: flex-end;
-  margin-top: 10px; }
+  justify-content: flex-end; }
   .nav .nav-items li {
     color: #1CA5F7;
     display: inline;
@@ -104,7 +110,7 @@ html, body {
   position: absolute;
   visibility: hidden;
   width: 20%;
-  z-index: 9; }
+  z-index: 8; }
   .action-buttons .list-button {
     background-color: white;
     border: 2px solid #fff;
@@ -135,6 +141,72 @@ html, body {
     animation-name: flip-animation; }
   .image-container:hover img {
     filter: blur(2px); }
+
+.modal {
+  background-color: #fff;
+  border: 2px solid #1CA5F7;
+  border-radius: 20px;
+  display: none;
+  left: 50%;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 60%;
+  z-index: 10; }
+
+.close {
+  border-radius: 100%;
+  color: #1CA5F7; }
+
+.modal-heading {
+  color: #1CA5F7;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700; }
+
+hr {
+  border: 1px solid #1CA5F7;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem; }
+
+.list-container a {
+  text-decoration: none; }
+.list-container .list-item {
+  border-bottom: 1px solid #9e9e9e;
+  color: #383838;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-size: 24px;
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  text-align: center; }
+  .list-container .list-item:hover {
+    background-color: #1CA5F7;
+    border-bottom: 1px solid #1CA5F7;
+    color: #fff; }
+
+.new-list {
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  text-align: center; }
+
+.modal-overlay {
+  background-color: #383838;
+  display: none;
+  opacity: 0.6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9; }
+
+.modal-open {
+  animation-duration: 0.4s;
+  animation-name: fade-animation;
+  display: block; }
+
+.overlay-open {
+  display: block; }
 
 .push, footer {
   height: 50px; }
