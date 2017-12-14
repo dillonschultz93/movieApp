@@ -15,4 +15,9 @@ $(document).ready(function(){
     modal.removeClass("modal-open");
     modalOverlay.removeClass("overlay-open");
   });
+
+  modalOverlay.click(function(){
+    modal.removeClass("modal-open");
+    modalOverlay.removeClass("overlay-open");
+  });
 });
