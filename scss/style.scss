@@ -125,7 +125,7 @@ html, body {
   position: absolute;
   visibility: hidden;
   width: 20%;
-  z-index: 8;
+  z-index: 7;
 
   .list-button {
     background-color: white;
@@ -138,6 +138,7 @@ html, body {
     font-weight: $heavy-weight;
     margin: auto 0;
     padding: 0 10px;
+    z-index: 8;
 
     &:hover {
       background-color: transparent;
@@ -234,9 +235,9 @@ hr {
 }
 
 .modal-overlay {
-
   background-color: $black;
   display: none;
+  filter: blur(2px);
   opacity: 0.6;
   position: fixed;
   top: 0;
