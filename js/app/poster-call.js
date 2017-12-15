@@ -43,9 +43,9 @@ $(document).ready(function(){
 
     $(".poster-container").prepend(posterContainer);
     posterContainer.append(btnContainer);
-    btnContainer.append(callToActionBtnWatchList);
-    btnContainer.append(callTOActionBtnAddList);
-    btnContainer.after(poster);
+    btnContainer.append(callToActionBtnWatchList)
+                .append(callTOActionBtnAddList)
+                .after(poster);
   }
 
   // == MAIN ==================================================================
