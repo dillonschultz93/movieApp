@@ -32,14 +32,15 @@ $(document).ready(function(){
   }
 
   // a function that dynamically creates the poster matrix
-  const renderPosterMatrix = function(image) {
+  const renderPosterMatrix = function(image, title) {
     // variables
     let posterContainer = $('<div class="three columns image-container">');
     let btnContainer = $('<div class="action-buttons">');
     let callToActionBtnWatchList = $('<button class="list-button">ADD TO "WATCHED LIST"</button>');
     let callTOActionBtnAddList = $('<button class="list-button open-modal">ADD TO A LIST</button>');
     let poster = $('<img>')
-          .attr('src', image);
+        .attr('src', image)
+        .attr("data-title", title);
 
     $(".poster-container").prepend(posterContainer);
     posterContainer.append(btnContainer);
@@ -79,7 +80,7 @@ $(document).ready(function(){
 
         // call the poster matrix function and pass the poster item from the
         // nowPlaying object
-        renderPosterMatrix(nowPlaying.poster);
+        renderPosterMatrix(nowPlaying.poster, nowPlaying.title);
 
         // call the click event function
         modalClickEvents();
