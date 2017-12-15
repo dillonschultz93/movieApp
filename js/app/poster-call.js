@@ -39,7 +39,7 @@ $(document).ready(function(){
     let callToActionBtnWatchList = $('<button class="list-button">ADD TO "WATCHED LIST"</button>');
     let callTOActionBtnAddList = $('<button class="list-button open-modal">ADD TO A LIST</button>');
     let poster = $('<img>')
-        .attr('src', image)
+        .attr('src', "https://image.tmdb.org/t/p/w500" + image)
         .attr("data-title", title);
 
     $(".poster-container").prepend(posterContainer);
@@ -57,30 +57,30 @@ $(document).ready(function(){
     url: mdbQueryURL,
     method: "GET"
   }).done(function(response){
-    console.log(response);
 
     // loops through the response...
     response.results.forEach(function(item, index){
-      console.log("title: ", response.results[index].title);
+      console.log("title: ", response.results[index].id);
       // ...to dynamically make a query URL...
-      let queryURL = "https://www.omdbapi.com/?t=" + response.results[index].title + "&y=&plot=short&apikey=dd113167";
-      console.log("url: ", queryURL);
+      // let queryURL = "https://www.omdbapi.com/?t=" + response.results[index].title + "&y=&plot=short&apikey=dd113167";
+      let queryURL = `https://api.themoviedb.org/3/movie/${response.results[index].id}/images?api_key=${MDB_API_KEY}&language=en`
       //...and to pass that URL into another AJAX call from the OMDb API
+      console.log(queryURL)
       $.ajax({
         url: queryURL,
         method: "GET"
       }).done(function(answer){
-        console.log(answer);
+        console.log(answer.posters[0].file_path);
         // save the title and poster image source
         let nowPlaying = {
-          title: answer.Title,
-  				poster: answer.Poster,
+          title: answer.id,
+  				poster: answer.posters[0].file_path,
         };
         console.log(nowPlaying);
 
         // call the poster matrix function and pass the poster item from the
         // nowPlaying object
-        renderPosterMatrix(nowPlaying.poster, nowPlaying.title);
+        renderPosterMatrix(nowPlaying.poster, nowPlaying.id);
 
         // call the click event function
         modalClickEvents();

@@ -23,6 +23,14 @@ html, body {
   margin-left: 0;
 }
 
+.list-item:nth-child(2n+1) {
+  margin-left: 0;
+}
+
+.six.columns:nth-of-type(2n+1) {
+  margin-left: 0;
+}
+
 // == Jumbotron styles ========================================================
 
 .jumbotron {
@@ -39,7 +47,11 @@ html, body {
 .nav {
   background-color: $primary-color;
   display: flex;
-  justify-content: flex-end;;
+  justify-content: flex-end;
+
+  .nav-items {
+    margin-bottom: 0;
+  }
 
   .nav-items li {
     color: $accent-color;
@@ -63,6 +75,12 @@ html, body {
     font-family: $primary-font;
     font-size: $primary-size;
   }
+}
+
+.nav-bar {
+  align-content: center;
+  height: auto;
+  padding: 20px;
 }
 
 // == Jumbotron content =======================================================
@@ -101,9 +119,23 @@ html, body {
 
 // == Main content ============================================================
 
+// -- Styles for index.html ---------------------------------------------------
+
+.heading {
+  color: $accent-color;
+  font-family: $primary-font;
+  font-size: $heading-size;
+  font-weight: $primary-weight;
+  letter-spacing: $head-spacing;
+  margin-top: 100px;
+}
+
 .subheading {
   color: $accent-color;
   font-family: $primary-font;
+  font-size: $subheading-size;
+  font-weight: $primary-weight;
+  letter-spacing: $primary-spacing;
   margin-top: 100px;
 }
 
@@ -162,14 +194,42 @@ html, body {
   &:hover { // when the user hovers over the poster image show the hidden buttons
     .action-buttons {
       visibility: visible;
-        animation-duration: 0.4s;
+        animation-duration: 0.7s;
         animation-name: flip-animation;
     }
 
     img {
       filter: blur(2px);
     }
+
+    .no-hover {
+      filter:blur(0px);
+    }
   }
+}
+
+// -- Styles for the user-lists.html page -------------------------------------
+
+.list-image-container {
+  width: 100%;
+
+  .list-poster {
+    width: 100%;
+  }
+}
+
+.list-title {
+  color: $black;
+  font-family: $primary-font;
+  font-size: $extra-lg-size;
+  font-weight: $primary-weight;
+}
+
+.basic-para {
+  color: $black;
+  font-family: $primary-font;
+  font-size: $small-size;
+  font-weight: $primary-weight;
 }
 
 // == Modal styling ===========================================================
@@ -211,7 +271,7 @@ hr {
     text-decoration: none;
   }
 
-  .list-item {
+  .user-list-item {
     border-bottom: 1px solid $gray;
     color: $black;
     font-family: $primary-font;
