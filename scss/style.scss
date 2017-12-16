@@ -42,32 +42,6 @@ hr {
   height: 500px;
   margin-top: 0px;
   padding: 20px;
-}
-
-// == Navbar overrides ========================================================
-
-.nav {
-  background-color: $primary-color;
-  display: flex;
-  justify-content: flex-end;
-
-  .nav-items {
-    margin-bottom: 0;
-  }
-
-  .nav-items li {
-    color: $accent-color;
-    display: inline;
-    font-family: $primary-font;
-    font-size: $primary-size;
-    list-style-type: none;
-    margin: 0px 10px;
-  }
-
-  .nav-items a {
-    color: $accent-color;
-    text-decoration: none;
-  }
 
   .nav-search {
     background-color: $primary-color;
@@ -77,12 +51,6 @@ hr {
     font-family: $primary-font;
     font-size: $primary-size;
   }
-}
-
-.nav-bar {
-  align-content: center;
-  height: auto;
-  padding: 20px;
 }
 
 // == Jumbotron content =======================================================

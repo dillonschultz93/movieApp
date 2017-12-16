@@ -46,35 +46,13 @@ hr {
   height: 500px;
   margin-top: 0px;
   padding: 20px; }
-
-.nav {
-  background-color: #E1F2FD;
-  display: flex;
-  justify-content: flex-end; }
-  .nav .nav-items {
-    margin-bottom: 0; }
-  .nav .nav-items li {
-    color: #1CA5F7;
-    display: inline;
-    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
-    font-size: 14px;
-    list-style-type: none;
-    margin: 0px 10px; }
-  .nav .nav-items a {
-    color: #1CA5F7;
-    text-decoration: none; }
-  .nav .nav-search {
+  .jumbotron .nav-search {
     background-color: #E1F2FD;
     border: 2px solid #1CA5F7;
     border-radius: 50px;
     color: #1CA5F7;
     font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
     font-size: 14px; }
-
-.nav-bar {
-  align-content: center;
-  height: auto;
-  padding: 20px; }
 
 .tagline {
   color: #1CA5F7;
