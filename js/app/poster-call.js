@@ -7,51 +7,25 @@ $(document).ready(function(){
 
   //== FUNCTIONS ==============================================================
 
-  // a function that creates click events to avoid event delegation
-  const modalClickEvents = function() {
-    //selector variables
-    const modal = $("#modal");
-    const modalOverlay = $("#modal-overlay");
-    const close = $("#close-btn");
-    const open = $(".open-modal");
-    // opens the modal
-    open.click(function(){
-      modal.addClass("modal-open");
-      modalOverlay.addClass("overlay-open");
-    });
-    // closes the modal
-    close.click(function(){
-      modal.removeClass("modal-open");
-      modalOverlay.removeClass("overlay-open");
-    });
-    // closes modal when clicked outside the modal
-    modalOverlay.click(function(){
-      modal.removeClass("modal-open");
-      modalOverlay.removeClass("overlay-open");
-    });
-  }
-
   // a function that dynamically creates the poster matrix
-  const renderPosterMatrix = function(image, title) {
+  const renderPosterMatrix = function(image, id, title) {
     // variables
     let posterContainer = $('<div class="three columns image-container">');
     let btnContainer = $('<div class="action-buttons">');
-    let callToActionBtnInfo = $('<button class="list-button">GET INFO</button>').attr("data-title-id", title);
-    let callToActionBtnWatchList = $('<button class="list-button">ADD TO "WATCHED LIST"</button>');
-    let callTOActionBtnAddList = $('<button class="list-button open-modal">ADD TO A LIST</button>');
+    let callToActionBtnInfo = $('<button class="list-button">GET INFO</button>').attr("data-movie-id", id);
+    callToActionBtnInfo.attr("data-movie-title", title);
     let poster = $('<img>')
         .attr('src', "https://image.tmdb.org/t/p/w500" + image)
+        .attr("data-id", id)
         .attr("data-title", title);
 
     $(".poster-container").prepend(posterContainer);
     posterContainer.append(btnContainer);
     btnContainer.append(callToActionBtnInfo)
-                .append(callToActionBtnWatchList)
-                .append(callTOActionBtnAddList)
                 .after(poster);
   }
 
-  // == MAIN ==================================================================
+  // == IN THEATERS VIEW ======================================================
 
   // AJAX call that obtains the movies now in theaters
   // from The Movie Database API
@@ -62,32 +36,32 @@ $(document).ready(function(){
     console.log(response)
     // loops through the response...
     response.results.forEach(function(item, index){
-      console.log("title: ", response.results[index].id);
+      let movieTitle = response.results[index].title;
       // ...to dynamically make a query URL...
       // let queryURL = "https://www.omdbapi.com/?t=" + response.results[index].title + "&y=&plot=short&apikey=dd113167";
       let queryURL = `https://api.themoviedb.org/3/movie/${response.results[index].id}/images?api_key=${MDB_API_KEY}&language=en`
       //...and to pass that URL into another AJAX call from the OMDb API
-      console.log(queryURL)
       $.ajax({
         url: queryURL,
         method: "GET"
       }).done(function(answer){
-        console.log("file path: ", answer);
         // save the title and poster image source
         let nowPlaying = {
           id: answer.id,
   				poster: answer.posters[0].file_path,
+          title: movieTitle
         };
         console.log(nowPlaying);
 
         // call the poster matrix function and pass the poster item from the
         // nowPlaying object
-        renderPosterMatrix(nowPlaying.poster, nowPlaying.id);
-
-        // call the click event function
-        modalClickEvents();
+        renderPosterMatrix(nowPlaying.poster, nowPlaying.id, nowPlaying.title);
       });
 
     });
   });
+
+  // == SEARCH VIEW ===========================================================
+
+  // == MOVIE DETAILS VIEW ====================================================
 });
