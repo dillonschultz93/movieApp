@@ -36,6 +36,7 @@ $(document).ready(function(){
     // variables
     let posterContainer = $('<div class="three columns image-container">');
     let btnContainer = $('<div class="action-buttons">');
+    let callToActionBtnInfo = $('<button class="list-button">GET INFO</button>').attr("data-title-id", title);
     let callToActionBtnWatchList = $('<button class="list-button">ADD TO "WATCHED LIST"</button>');
     let callTOActionBtnAddList = $('<button class="list-button open-modal">ADD TO A LIST</button>');
     let poster = $('<img>')
@@ -44,7 +45,8 @@ $(document).ready(function(){
 
     $(".poster-container").prepend(posterContainer);
     posterContainer.append(btnContainer);
-    btnContainer.append(callToActionBtnWatchList)
+    btnContainer.append(callToActionBtnInfo)
+                .append(callToActionBtnWatchList)
                 .append(callTOActionBtnAddList)
                 .after(poster);
   }
@@ -57,7 +59,7 @@ $(document).ready(function(){
     url: mdbQueryURL,
     method: "GET"
   }).done(function(response){
-
+    console.log(response)
     // loops through the response...
     response.results.forEach(function(item, index){
       console.log("title: ", response.results[index].id);
@@ -70,10 +72,10 @@ $(document).ready(function(){
         url: queryURL,
         method: "GET"
       }).done(function(answer){
-        console.log(answer.posters[0].file_path);
+        console.log("file path: ", answer);
         // save the title and poster image source
         let nowPlaying = {
-          title: answer.id,
+          id: answer.id,
   				poster: answer.posters[0].file_path,
         };
         console.log(nowPlaying);
