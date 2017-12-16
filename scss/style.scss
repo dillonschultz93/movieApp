@@ -23,12 +23,14 @@ html, body {
   margin-left: 0;
 }
 
-.list-item:nth-child(2n+1) {
+.six.columns:nth-of-type(2n+1) {
   margin-left: 0;
 }
 
-.six.columns:nth-of-type(2n+1) {
-  margin-left: 0;
+hr {
+  border: 1px solid $accent-color;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 // == Jumbotron styles ========================================================
@@ -210,6 +212,22 @@ html, body {
 
 // -- Styles for the user-lists.html page -------------------------------------
 
+.list-item {
+  align-items: center;
+  display: flex;
+  margin-bottom: 30px;
+  padding: 12px;
+
+  &:hover {
+    background-color: $primary-color;
+    border-radius: $small-radius;
+  }
+}
+
+.list-item:nth-child(2n+1) {
+  margin-left: 0;
+}
+
 .list-image-container {
   width: 100%;
 
@@ -228,7 +246,7 @@ html, body {
 .basic-para {
   color: $black;
   font-family: $primary-font;
-  font-size: $small-size;
+  font-size: $primary-size;
   font-weight: $primary-weight;
 }
 
@@ -257,12 +275,6 @@ html, body {
   color: $accent-color;
   font-family: $primary-font;
   font-weight: $heavy-weight;
-}
-
-hr {
-  border: 1px solid $accent-color;
-  margin-top: 2rem;
-  margin-bottom: 2.5rem;
 }
 
 .list-container {

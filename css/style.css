@@ -33,11 +33,13 @@ html, body {
 .three.columns:nth-of-type(4n+5) {
   margin-left: 0; }
 
-.list-item:nth-child(2n+1) {
-  margin-left: 0; }
-
 .six.columns:nth-of-type(2n+1) {
   margin-left: 0; }
+
+hr {
+  border: 1px solid #1CA5F7;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem; }
 
 .jumbotron {
   background-color: #E1F2FD;
@@ -169,6 +171,18 @@ html, body {
   .image-container:hover .no-hover {
     filter: blur(0px); }
 
+.list-item {
+  align-items: center;
+  display: flex;
+  margin-bottom: 30px;
+  padding: 12px; }
+  .list-item:hover {
+    background-color: #E1F2FD;
+    border-radius: 20px; }
+
+.list-item:nth-child(2n+1) {
+  margin-left: 0; }
+
 .list-image-container {
   width: 100%; }
   .list-image-container .list-poster {
@@ -183,7 +197,7 @@ html, body {
 .basic-para {
   color: #383838;
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400; }
 
 .modal {
@@ -207,11 +221,6 @@ html, body {
   color: #1CA5F7;
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-weight: 700; }
-
-hr {
-  border: 1px solid #1CA5F7;
-  margin-top: 2rem;
-  margin-bottom: 2.5rem; }
 
 .list-container a {
   text-decoration: none; }
