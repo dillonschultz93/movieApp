@@ -75,37 +75,37 @@ const renderPosterMatrix = function (image, id, title) {
 
   // AJAX call that obtains the movies now in theaters
   // from The Movie Database API
-  // $.ajax({
-  //   url: mdbQueryURL,
-  //   method: "GET"
-  // }).done(function(response){
-  //   console.log(response)
-  //   // loops through the response...
-  //   response.results.forEach(function(item, index){
-  //     let movieTitle = response.results[index].title;
-  //     // ...to dynamically make a query URL...
-  //     // let queryURL = "https://www.omdbapi.com/?t=" + response.results[index].title + "&y=&plot=short&apikey=dd113167";
-  //     let queryURL = `https://api.themoviedb.org/3/movie/${response.results[index].id}/images?api_key=${MDB_API_KEY}&language=en`
-  //     //...and to pass that URL into another AJAX call from the OMDb API
-  //     $.ajax({
-  //       url: queryURL,
-  //       method: "GET"
-  //     }).done(function(answer){
-  //       // save the title and poster image source
-  //       console.log(answer)
-  //       let nowPlaying = {
-  //         id: answer.id,
-  // 				poster: answer.posters[0].file_path,
-  //         title: movieTitle
-  //       };
-  //       console.log(nowPlaying);
+  $.ajax({
+    url: mdbQueryURL,
+    method: "GET"
+  }).done(function(response){
+    console.log(response)
+    // loops through the response...
+    response.results.forEach(function(item, index){
+      let movieTitle = response.results[index].title;
+      // ...to dynamically make a query URL...
+      // let queryURL = "https://www.omdbapi.com/?t=" + response.results[index].title + "&y=&plot=short&apikey=dd113167";
+      let queryURL = `https://api.themoviedb.org/3/movie/${response.results[index].id}/images?api_key=${MDB_API_KEY}&language=en`
+      //...and to pass that URL into another AJAX call from the OMDb API
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).done(function(answer){
+        // save the title and poster image source
+        console.log(answer)
+        let nowPlaying = {
+          id: answer.id,
+  				poster: answer.posters[0].file_path,
+          title: movieTitle
+        };
+        console.log(nowPlaying);
 
-  //       // call the poster matrix function and pass the poster item from the
-  //       // nowPlaying object
-  //       renderPosterMatrix(nowPlaying.poster, nowPlaying.id, nowPlaying.title);
-  //     });
-  //   });
-  // });
+        // call the poster matrix function and pass the poster item from the
+        // nowPlaying object
+        renderPosterMatrix(nowPlaying.poster, nowPlaying.id, nowPlaying.title);
+      });
+    });
+  });
 
   // == SEARCH VIEW ===========================================================
 
