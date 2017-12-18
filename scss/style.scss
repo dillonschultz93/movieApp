@@ -23,10 +23,6 @@ html, body {
   margin-left: 0;
 }
 
-.six.columns:nth-of-type(2n+1) {
-  margin-left: 0;
-}
-
 hr {
   border: 1px solid $accent-color;
   margin-top: 2rem;
@@ -36,10 +32,8 @@ hr {
 // == Jumbotron styles ========================================================
 
 .jumbotron {
-  // align-content: space-between;
   background-color: $primary-color;
-  // display: flex;
-  height: 500px;
+  height: 400px;
   margin-top: 0px;
   padding: 20px;
 
@@ -64,27 +58,10 @@ hr {
   letter-spacing: $primary-spacing;
 }
 
-.btn-container {
+.search-container {
   display: flex;
   justify-content: center;
   margin-top: 50px;
-}
-
-.call-button {
-  background-color: transparent;
-  border: $border;
-  border-radius: $radius;
-  color: $accent-color;
-  font-family: $primary-font;
-  font-size: $primary-size;
-  font-weight: $light-weight;
-  margin: 0 auto;
-
-  &:hover {
-    background-color: $accent-color;
-    border: $border;
-    color: $white;
-  }
 }
 
 // == Main content ============================================================
@@ -109,6 +86,18 @@ hr {
   margin-top: 100px;
 }
 
+.section-heading {
+  color: $accent-color;
+  border-bottom: 1px solid $accent-color;
+  font-family: $primary-font;
+  font-size: $large-size;
+  font-weight: $light-weight;
+  letter-spacing: $primary-spacing;
+  margin-bottom: 15px;
+  padding: 8px;
+  text-align: center;
+}
+
 .poster-container {
   display: flex;
   flex-direction: row;
@@ -121,9 +110,8 @@ hr {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  height: 10%;
   opacity: 0.9;
-  padding: 4px;
+  padding: 10px 4px;
   position: absolute;
   visibility: hidden;
   width: 20%;
@@ -164,7 +152,7 @@ hr {
   &:hover { // when the user hovers over the poster image show the hidden buttons
     .action-buttons {
       visibility: visible;
-        animation-duration: 0.7s;
+        animation-duration: 0.5s;
         animation-name: flip-animation;
     }
 
@@ -178,32 +166,6 @@ hr {
   }
 }
 
-// -- Styles for the user-lists.html page -------------------------------------
-
-.list-item {
-  align-items: center;
-  display: flex;
-  margin-bottom: 30px;
-  padding: 12px;
-
-  &:hover {
-    background-color: $primary-color;
-    border-radius: $small-radius;
-  }
-}
-
-.list-item:nth-child(2n+1) {
-  margin-left: 0;
-}
-
-.list-image-container {
-  width: 100%;
-
-  .list-poster {
-    width: 100%;
-  }
-}
-
 .list-title {
   color: $black;
   font-family: $primary-font;
@@ -214,8 +176,61 @@ hr {
 .basic-para {
   color: $black;
   font-family: $primary-font;
-  font-size: $primary-size;
+  font-size: $large-size;
   font-weight: $primary-weight;
+  letter-spacing: $primary-spacing;
+}
+
+.nav-item {
+  display: inline;
+  margin-right: 10px;
+}
+
+#where-to-watch {
+  margin-left: 0;
+}
+
+.detail-btn {
+  border: none;
+  border-radius: 0px;
+  padding: 10px;
+
+  &:hover {
+    border-bottom: 2px solid $accent-color;
+    color: $accent-color;
+  }
+
+  &:focus {
+    border-bottom: 2px solid $accent-color;
+    color: $accent-color;
+  }
+}
+
+.info {
+  color: $accent-color;
+  font-family: $primary-font;
+  font-weight: $heavy-weight;
+}
+
+#plot {
+  font-size: $extra-lg-size;
+  font-weight: $light-weight;
+}
+
+#actors {
+  font-weight: $light-weight;
+}
+
+#director {
+  font-weight: $light-weight;
+}
+
+#writer {
+  font-weight: $light-weight;
+}
+
+#genres {
+  font-weight: $light-weight;
 }
 
 // == Footer ==================================================================
