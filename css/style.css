@@ -33,9 +33,6 @@ html, body {
 .three.columns:nth-of-type(4n+5) {
   margin-left: 0; }
 
-.six.columns:nth-of-type(2n+1) {
-  margin-left: 0; }
-
 hr {
   border: 1px solid #1CA5F7;
   margin-top: 2rem;
@@ -43,7 +40,7 @@ hr {
 
 .jumbotron {
   background-color: #E1F2FD;
-  height: 500px;
+  height: 400px;
   margin-top: 0px;
   padding: 20px; }
   .jumbotron .nav-search {
@@ -62,24 +59,10 @@ hr {
   text-align: center;
   letter-spacing: -0.03em; }
 
-.btn-container {
+.search-container {
   display: flex;
   justify-content: center;
   margin-top: 50px; }
-
-.call-button {
-  background-color: transparent;
-  border: 2px solid #1CA5F7;
-  border-radius: 50px;
-  color: #1CA5F7;
-  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  margin: 0 auto; }
-  .call-button:hover {
-    background-color: #1CA5F7;
-    border: 2px solid #1CA5F7;
-    color: #fff; }
 
 .heading {
   color: #1CA5F7;
@@ -97,6 +80,17 @@ hr {
   letter-spacing: -0.03em;
   margin-top: 100px; }
 
+.section-heading {
+  color: #1CA5F7;
+  border-bottom: 1px solid #1CA5F7;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  margin-bottom: 15px;
+  padding: 8px;
+  text-align: center; }
+
 .poster-container {
   display: flex;
   flex-direction: row;
@@ -108,9 +102,8 @@ hr {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  height: 10%;
   opacity: 0.9;
-  padding: 4px;
+  padding: 10px 4px;
   position: absolute;
   visibility: hidden;
   width: 20%;
@@ -142,41 +135,64 @@ hr {
     height: 100%; }
   .image-container:hover .action-buttons {
     visibility: visible;
-    animation-duration: 0.7s;
+    animation-duration: 0.5s;
     animation-name: flip-animation; }
   .image-container:hover img {
     filter: blur(2px); }
   .image-container:hover .no-hover {
     filter: blur(0px); }
 
-.list-item {
-  align-items: center;
-  display: flex;
-  margin-bottom: 30px;
-  padding: 12px; }
-  .list-item:hover {
-    background-color: #E1F2FD;
-    border-radius: 20px; }
-
-.list-item:nth-child(2n+1) {
-  margin-left: 0; }
-
-.list-image-container {
-  width: 100%; }
-  .list-image-container .list-poster {
-    width: 100%; }
-
 .list-title {
-  color: #383838;
+  color: #656565;
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: 24px;
   font-weight: 400; }
 
 .basic-para {
-  color: #383838;
+  color: #656565;
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400; }
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.03em; }
+
+.nav-item {
+  display: inline;
+  margin-right: 10px; }
+
+#where-to-watch {
+  margin-left: 0; }
+
+.detail-btn {
+  border: none;
+  border-radius: 0px;
+  padding: 10px; }
+  .detail-btn:hover {
+    border-bottom: 2px solid #1CA5F7;
+    color: #1CA5F7; }
+  .detail-btn:focus {
+    border-bottom: 2px solid #1CA5F7;
+    color: #1CA5F7; }
+
+.info {
+  color: #1CA5F7;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700; }
+
+#plot {
+  font-size: 24px;
+  font-weight: 300; }
+
+#actors {
+  font-weight: 300; }
+
+#director {
+  font-weight: 300; }
+
+#writer {
+  font-weight: 300; }
+
+#genres {
+  font-weight: 300; }
 
 .push, footer {
   height: 50px; }
