@@ -151,13 +151,25 @@ $(".poster-container").on("click", ".list-button", function () {
       }
     }).done(function (response) {
       console.log(response)
-      if (response.results.length === 0){
+      if (response.results.length === 0) {
         $(".not-available").text("Not available for Streaming.")
       }
-      else{
+      else {
         response.results.forEach(function (item, index) {
-          
-        })          
+          if (item.name === input) {
+            item.locations.forEach(function (element, index) {
+              let streamSiteTitle = item.locations[index].display_name
+              let streamSiteuRL = item.locations[index].url
+              let streamSiteIcon = item.locations[index].icon
+              $('<img />').attr({
+                src: streamSiteIcon,
+              }).appendTo($('<a />').attr({
+                href: streamSiteuRL,
+                target: "_blank"
+              }).appendTo($('#where-to-watch')));
+            })
+          }
+        })
       }
     })
     // empties out the poster container and dynamically fills in HTML based on
