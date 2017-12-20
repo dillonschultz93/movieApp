@@ -33,7 +33,9 @@ hr {
 
 .jumbotron {
   background-color: $primary-color;
+  display: flex;
   height: 400px;
+  justify-content: center;
   margin-top: 0px;
   padding: 20px;
 
@@ -44,6 +46,26 @@ hr {
     color: $accent-color;
     font-family: $primary-font;
     font-size: $primary-size;
+  }
+
+  .jumbo-btn {
+    background-color: transparent;
+    border: $border;
+    border-radius: $small-radius;
+    color: $accent-color;
+    flex-basis: content;
+    font-family: $primary-font;
+    font-size: $extra-sm-size;
+    font-weight: $heavy-weight;
+    margin: auto 0;
+    padding: 0 10px;
+    z-index: 8;
+
+    &:hover {
+      background-color: $accent-color;
+      border: $border;
+      color: $white;
+    }
   }
 }
 
@@ -60,6 +82,7 @@ hr {
 
 .search-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: 50px;
 }
@@ -88,6 +111,7 @@ hr {
 
 .section-heading {
   color: $accent-color;
+  border-top: 1px solid $accent-color;
   border-bottom: 1px solid $accent-color;
   font-family: $primary-font;
   font-size: $large-size;
@@ -186,6 +210,18 @@ hr {
   letter-spacing: $primary-spacing;
 }
 
+.not-available {
+  text-align: center;
+  font-family: $primary-font;
+  font-size: $primary-size;
+  font-weight: $light-weight;
+  color: $gray;
+}
+
+.nav-components {
+  border-bottom: 1px solid $accent-color;
+}
+
 .nav-item {
   display: inline;
   margin-right: 10px;
@@ -238,6 +274,26 @@ hr {
   font-weight: $light-weight;
 }
 
+#go-back {
+  background-color: transparent;
+  border: $border;
+  border-radius: $small-radius;
+  color: $accent-color;
+  flex-basis: content;
+  font-family: $primary-font;
+  font-size: $extra-sm-size;
+  font-weight: $heavy-weight;
+  margin: auto 0;
+  padding: 0 10px;
+  z-index: 8;
+
+  &:hover {
+    background-color: $accent-color;
+    border: $border;
+    color: $white;
+  }
+}
+
 // == Footer ==================================================================
 
 .push, footer {
@@ -263,6 +319,63 @@ footer {
 
 // == Media Queries ===========================================================
 
-@media screen and (min-width: 550px) and (max-width: 750px) {
+@media screen and (min-width: 550px) and (max-width: 768px) {
 
+  #poster {
+    width: 48%;
+  }
+
+  #where-to-watch {
+    width: 48%;
+    margin-right: 0;
+    margin-bottom: 15px;
+
+  }
+
+  #rating-section {
+    width: 48%;
+    margin-left: 0;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+
+  .cast-crew-details {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #back-btn {
+    width: 48%;
+  }
+
+  #go-back {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 586px) {
+  .tagline {
+    font-size: 50px;
+  }
+
+  .jumbotron {
+    height: 350px;
+  }
+
+}
+
+@media screen and (max-width: 548px) {
+  .info {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .image-container {
+    width: 48%;
+    margin-right: 5px;
+  }
+
+  .image-container:nth-of-type(2n+3) {
+    margin-left: 0;
+  }
 }

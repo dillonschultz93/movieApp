@@ -40,7 +40,9 @@ hr {
 
 .jumbotron {
   background-color: #E1F2FD;
+  display: flex;
   height: 400px;
+  justify-content: center;
   margin-top: 0px;
   padding: 20px; }
   .jumbotron .nav-search {
@@ -50,6 +52,22 @@ hr {
     color: #1CA5F7;
     font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
     font-size: 14px; }
+  .jumbotron .jumbo-btn {
+    background-color: transparent;
+    border: 2px solid #1CA5F7;
+    border-radius: 20px;
+    color: #1CA5F7;
+    flex-basis: content;
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    margin: auto 0;
+    padding: 0 10px;
+    z-index: 8; }
+    .jumbotron .jumbo-btn:hover {
+      background-color: #1CA5F7;
+      border: 2px solid #1CA5F7;
+      color: #fff; }
 
 .tagline {
   color: #1CA5F7;
@@ -61,6 +79,7 @@ hr {
 
 .search-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: 50px; }
 
@@ -82,6 +101,7 @@ hr {
 
 .section-heading {
   color: #1CA5F7;
+  border-top: 1px solid #1CA5F7;
   border-bottom: 1px solid #1CA5F7;
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
@@ -159,6 +179,16 @@ hr {
   font-weight: 400;
   letter-spacing: -0.03em; }
 
+.not-available {
+  text-align: center;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #9e9e9e; }
+
+.nav-components {
+  border-bottom: 1px solid #1CA5F7; }
+
 .nav-item {
   display: inline;
   margin-right: 10px; }
@@ -198,6 +228,23 @@ hr {
 #genres {
   font-weight: 300; }
 
+#go-back {
+  background-color: transparent;
+  border: 2px solid #1CA5F7;
+  border-radius: 20px;
+  color: #1CA5F7;
+  flex-basis: content;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  margin: auto 0;
+  padding: 0 10px;
+  z-index: 8; }
+  #go-back:hover {
+    background-color: #1CA5F7;
+    border: 2px solid #1CA5F7;
+    color: #fff; }
+
 .push, footer {
   height: 50px; }
 
@@ -215,5 +262,47 @@ footer {
   font-weight: 400;
   text-align: center;
   margin-bottom: 0; }
+
+@media screen and (min-width: 550px) and (max-width: 768px) {
+  #poster {
+    width: 48%; }
+
+  #where-to-watch {
+    width: 48%;
+    margin-right: 0;
+    margin-bottom: 15px; }
+
+  #rating-section {
+    width: 48%;
+    margin-left: 0;
+    margin-right: 15px;
+    margin-bottom: 15px; }
+
+  .cast-crew-details {
+    width: 100%;
+    margin-left: 0; }
+
+  #back-btn {
+    width: 48%; }
+
+  #go-back {
+    width: 100%; } }
+@media screen and (min-width: 360px) and (max-width: 586px) {
+  .tagline {
+    font-size: 50px; }
+
+  .jumbotron {
+    height: 350px; } }
+@media screen and (max-width: 548px) {
+  .info {
+    font-size: 18px;
+    text-align: center; }
+
+  .image-container {
+    width: 48%;
+    margin-right: 5px; }
+
+  .image-container:nth-of-type(2n+3) {
+    margin-left: 0; } }
 
 /*# sourceMappingURL=style.css.map */
