@@ -1,5 +1,5 @@
 // == GLOBALS ===============================================================
-
+let movieSearch
 const MDB_API_KEY = "ffc97c5f0da84d58942394e6f958c2cd";
 let mdbQueryURL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${MDB_API_KEY}`;
 
@@ -28,6 +28,7 @@ const renderPosterMatrix = function (image, id, title) {
 // AJAX call that obtains the movies now in theaters
 // from The Movie Database API
 const posterCall = function () {
+  movieSearch = ""
   $.ajax({
     url: mdbQueryURL,
     method: "GET"
@@ -168,6 +169,7 @@ $(".poster-container").on("click", ".list-button", function () {
                 href: streamSiteuRL,
                 target: "_blank"
               }).appendTo($('#where-to-watch')));
+              $('<br>').appendTo('#where-to-watch')
             })
           }
         })
@@ -272,6 +274,11 @@ $(".poster-container").on("click", ".list-button", function () {
 $('.poster-container').on("click", "#go-back", function () {
   $('.poster-container').empty();
   $('#subheading').text("In Theaters Now");
-  posterCall();
-
+  if (movieSearch){
+    clearQueryResults()
+    movieSearchQueryResults()
+  }
+  else {
+    posterCall()
+  }
 });
