@@ -84,7 +84,7 @@ const movieSearchQueryResults = function (movie) {
           poster: answer.posters[0].file_path,
           // PREVENT ERRORS FROM DISPLAYING
           // PROBLEM: RENDERS BLANKS IN POSTER MATRIX -- LEAVES HOLES IN PAGE
-          // poster: answer.posters[0] && answer.posters[0].file_path,          
+          // poster: answer.posters[0] && answer.posters[0].file_path,
           title: movieTitle
         };
         // call the poster matrix function and pass the poster item from the
@@ -281,13 +281,14 @@ $('.poster-container').on("click", "#go-back", function () {
     movieSearchQueryResults()
   }
   else {
-    posterCall()
+    posterCall();
+    $('.subheading').text("In Theaters Now");
   }
 });
 
 $('.jumbo-btn').on("click", function () {
   $(".poster-container").empty()
   posterCall()
-  $('.subheading').text("In Theaters Now");    
-  
+  $('.subheading').text("In Theaters Now");
+
 })
