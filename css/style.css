@@ -57,8 +57,8 @@ hr {
     font-size: 14px; }
     .jumbotron .nav-search:focus {
       border: 2px solid #1CA5F7;
-      background-color: #1CA5F7;
-      color: #fff; }
+      background-color: #E1F2FD;
+      color: #1CA5F7; }
   .jumbotron .jumbo-btn {
     background-color: transparent;
     border: 2px solid #1CA5F7;
