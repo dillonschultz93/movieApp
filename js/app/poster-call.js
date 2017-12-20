@@ -276,7 +276,6 @@ $(".poster-container").on("click", ".list-button", function () {
 // Click event for the return button
 $('.poster-container').on("click", "#go-back", function () {
   $('.poster-container').empty();
-  $('#subheading').text("In Theaters Now");
   if (movieSearch){
     clearQueryResults()
     movieSearchQueryResults()
@@ -289,4 +288,6 @@ $('.poster-container').on("click", "#go-back", function () {
 $('.jumbo-btn').on("click", function () {
   $(".poster-container").empty()
   posterCall()
+  $('.subheading').text("In Theaters Now");    
+  
 })
