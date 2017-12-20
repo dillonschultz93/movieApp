@@ -32,7 +32,10 @@ hr {
 // == Jumbotron styles ========================================================
 
 .jumbotron {
-  background-color: $primary-color;
+  align-items: center;
+  background-image: url('../assets/images/jumbotron-pattern.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
   height: 400px;
   justify-content: center;
@@ -40,12 +43,18 @@ hr {
   padding: 20px;
 
   .nav-search {
-    background-color: $primary-color;
+    background-color: transparent;
     border: $border;
     border-radius: $radius;
     color: $accent-color;
     font-family: $primary-font;
     font-size: $primary-size;
+
+    &:focus {
+      border: $border;
+      background-color: $accent-color;
+      color: $white;
+    }
   }
 
   .jumbo-btn {
@@ -78,6 +87,13 @@ hr {
   font-weight: 700;
   text-align: center;
   letter-spacing: $primary-spacing;
+}
+
+.sub-tagline {
+  color: $accent-color;
+  font-family: $primary-font;
+  font-weight: 500;
+  text-align: center;
 }
 
 .search-container {
@@ -370,6 +386,26 @@ footer {
     text-align: center;
   }
 
+  #poster {
+    width: 100%;
+  }
+
+  .synop {
+    margin-bottom: 15px;
+  }
+
+  .rating {
+    margin-bottom: 15px;
+  }
+
+  #where-to-watch {
+    margin-bottom: 15px;
+  }
+
+  .cast-crew-details {
+    margin-bottom: 15px;
+  }
+
   .image-container {
     width: 48%;
     margin-right: 5px;
@@ -377,5 +413,9 @@ footer {
 
   .image-container:nth-of-type(2n+3) {
     margin-left: 0;
+  }
+
+  .action-buttons {
+    width: 40%;
   }
 }

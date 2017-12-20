@@ -39,19 +39,26 @@ hr {
   margin-bottom: 2.5rem; }
 
 .jumbotron {
-  background-color: #E1F2FD;
+  align-items: center;
+  background-image: url("../assets/images/jumbotron-pattern.jpg");
+  background-size: cover;
+  background-position: center;
   display: flex;
   height: 400px;
   justify-content: center;
   margin-top: 0px;
   padding: 20px; }
   .jumbotron .nav-search {
-    background-color: #E1F2FD;
+    background-color: transparent;
     border: 2px solid #1CA5F7;
     border-radius: 50px;
     color: #1CA5F7;
     font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
     font-size: 14px; }
+    .jumbotron .nav-search:focus {
+      border: 2px solid #1CA5F7;
+      background-color: #1CA5F7;
+      color: #fff; }
   .jumbotron .jumbo-btn {
     background-color: transparent;
     border: 2px solid #1CA5F7;
@@ -76,6 +83,12 @@ hr {
   font-weight: 700;
   text-align: center;
   letter-spacing: -0.03em; }
+
+.sub-tagline {
+  color: #1CA5F7;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500;
+  text-align: center; }
 
 .search-container {
   display: flex;
@@ -298,11 +311,29 @@ footer {
     font-size: 18px;
     text-align: center; }
 
+  #poster {
+    width: 100%; }
+
+  .synop {
+    margin-bottom: 15px; }
+
+  .rating {
+    margin-bottom: 15px; }
+
+  #where-to-watch {
+    margin-bottom: 15px; }
+
+  .cast-crew-details {
+    margin-bottom: 15px; }
+
   .image-container {
     width: 48%;
     margin-right: 5px; }
 
   .image-container:nth-of-type(2n+3) {
-    margin-left: 0; } }
+    margin-left: 0; }
+
+  .action-buttons {
+    width: 40%; } }
 
 /*# sourceMappingURL=style.css.map */
