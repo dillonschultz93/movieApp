@@ -1,5 +1,5 @@
 // == GLOBALS ===============================================================
-
+let movieSearch
 const MDB_API_KEY = "ffc97c5f0da84d58942394e6f958c2cd";
 let mdbQueryURL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${MDB_API_KEY}`;
 
@@ -28,6 +28,7 @@ const renderPosterMatrix = function (image, id, title) {
 // AJAX call that obtains the movies now in theaters
 // from The Movie Database API
 const posterCall = function () {
+  movieSearch = ""
   $.ajax({
     url: mdbQueryURL,
     method: "GET"
@@ -81,6 +82,9 @@ const movieSearchQueryResults = function (movie) {
         let nowPlaying = {
           id: answer.id,
           poster: answer.posters[0].file_path,
+          // PREVENT ERRORS FROM DISPLAYING
+          // PROBLEM: RENDERS BLANKS IN POSTER MATRIX -- LEAVES HOLES IN PAGE
+          // poster: answer.posters[0] && answer.posters[0].file_path,          
           title: movieTitle
         };
         // call the poster matrix function and pass the poster item from the
@@ -132,15 +136,15 @@ $(".poster-container").on("click", ".list-button", function () {
       plot: response.Plot,
       genre: response.Genre,
     }
-    if (response.Ratings[0]) {
+    // if (response.Ratings[0]) {
       movieObject.rating1 = response.Ratings[0]
-    }
-    if (response.Ratings[1]) {
+    // }
+    // if (response.Ratings[1]) {
       movieObject.rating2 = response.Ratings[1]
-    }
-    if (response.Ratings[2]) {
+    // }
+    // if (response.Ratings[2]) {
       movieObject.rating3 = response.Ratings[2]
-    }
+    // }
     //AJAX call for UTelly - Streaming services
     $.ajax({
       type: "GET",
@@ -153,7 +157,7 @@ $(".poster-container").on("click", ".list-button", function () {
     }).done(function (response) {
       console.log(response)
       if (response.results.length === 0) {
-        $(".not-available").text("Not available for Streaming.")
+        $(".not-available").text("Not yet available for streaming.")
       }
       else {
         response.results.forEach(function (item, index) {
@@ -168,6 +172,7 @@ $(".poster-container").on("click", ".list-button", function () {
                 href: streamSiteuRL,
                 target: "_blank"
               }).appendTo($('#where-to-watch')));
+              $('<br>').appendTo('#where-to-watch')
             })
           }
         })
@@ -181,13 +186,13 @@ $(".poster-container").on("click", ".list-button", function () {
     let movieInfo = $('<div id="movie-details">');
     let poster = $('<img class="no-hover">')
       .attr("src", "https://image.tmdb.org/t/p/w500" + posterSource);
-    let posterColumn = $('<div class="three columns image-container">')
+    let posterColumn = $('<div class="three columns image-container" id="poster">')
       .append(poster);
     let synopsis = $('<div class="six columns synop">')
       .append('<p class="info" id="year"></p>')
       .append('<p class="info">Rating: <span id="rating"></span></p>')
       .append('<p class="basic-para" id="plot"></p>');
-    let ratingSection = $('<div class="three columns rating">')
+    let ratingSection = $('<div class="three columns rating" id="rating-section">')
       .prepend('<h5 class="section-heading">Rating</h5>')
       // .append('<p class="info">Rotten Tomatoes: <span id="rotten-tomatoes"></span></p>');
       .append('<p class="info"><span id="rating1"></span><span id="rating1-val"></span></p>')
@@ -211,7 +216,7 @@ $(".poster-container").on("click", ".list-button", function () {
     let writer = $('<p class="basic-para">Writer: <span id="writer"><span></p>');
     let genre = $('<p class="basic-para">Genre(s): <span id="genres"><span></p>');
     let returnButton = $('<button class="u-full-width" id="go-back">Go Back</button>');
-    let returnSection = $('<div class="three columns">')
+    let returnSection = $('<div class="three columns" id="back-btn">')
       .append(returnButton);
 
 
@@ -272,6 +277,16 @@ $(".poster-container").on("click", ".list-button", function () {
 $('.poster-container').on("click", "#go-back", function () {
   $('.poster-container').empty();
   $('#subheading').text("In Theaters Now");
-  posterCall();
-
+  if (movieSearch){
+    clearQueryResults()
+    movieSearchQueryResults()
+  }
+  else {
+    posterCall()
+  }
 });
+
+$('.jumbo-btn').on("click", function () {
+  $(".poster-container").empty()
+  posterCall()
+})
