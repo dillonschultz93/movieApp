@@ -25,7 +25,6 @@
   <!-- Link to our own JS here -->
   <!-- <script type="text/javascript" src="js/app/logic.js"></script> -->
   <!-- <script type="text/javascript" src="js/app/modal.js"></script> -->
-  <script type="text/javascript" src="js/app/poster-call.js"></script>
 
 
   <title>Document</title>
@@ -37,15 +36,18 @@
       <div class="row">
         <h1 class="tagline">Lorem Ipsum<br>Dolar Sit Amet</h1>
       </div>
-      <div class="row">
-        <input type="search" placeholder="Search..." class="nav-search six columns" id="search">
+      <div class="row search-container">
+        <input type="search" placeholder="Search..." class="nav-search eight columns" id="search">
+        <button class="jumbo-btn six columns u-full-width">In Theaters Now</button>
       </div>
+
+
     </div>
   </div>
   <!-- Page's main content starts here -->
   <div class="container">
     <div class="row">
-      <h2 class="subheading">In Theaters Now</h2>
+      <h2 class="subheading"><span id="subheading">In Theaters Now</span></h2>
     </div>
     <div class="row poster-container">
       <!-- DOM MANIPULATION HERE -->
@@ -57,5 +59,6 @@
   <footer>
     <p class="footer-content">&copy; Group Name 2017</p>
   </footer>
+  <script type="text/javascript" src="js/app/poster-call.js"></script>
 </body>
 </html>
