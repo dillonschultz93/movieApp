@@ -32,6 +32,7 @@ const posterCall = function () {
     url: mdbQueryURL,
     method: "GET"
   }).done(function (response) {
+    console.log(response);
     // loops through the response...
     response.results.forEach(function (item, index) {
       let movieTitle = response.results[index].title;
@@ -177,6 +178,7 @@ $(".poster-container").on("click", ".list-button", function () {
     $(".poster-container").empty();
     $("#subheading").empty();
     // variables that store query selectors
+    let movieInfo = $('<div id="movie-details">');
     let poster = $('<img class="no-hover">')
       .attr("src", "https://image.tmdb.org/t/p/w500" + posterSource);
     let posterColumn = $('<div class="three columns image-container">')
@@ -215,12 +217,13 @@ $(".poster-container").on("click", ".list-button", function () {
 
     //DOM Manipulation
     $("#subheading").text(movieObject.title);
-    $(".poster-container").prepend(posterColumn);
-    $(".poster-container").append(synopsis);
+    $(".poster-container").append(movieInfo);
+    $(movieInfo).prepend(posterColumn);
+    $(movieInfo).append(synopsis);
     $("#year").text(movieObject.year);
     $("#rating").text(movieObject.rating);
     $("#plot").text(movieObject.plot);
-    $(".poster-container").append(ratingSection);
+    $(movieInfo).append(ratingSection);
     if (movieObject.rating1) {
       $("#rating1").text(movieObject.rating1.Source + ": ");
       $("#rating1-val").text(movieObject.rating1.Value);
@@ -233,9 +236,9 @@ $(".poster-container").on("click", ".list-button", function () {
       $("#rating3").text(movieObject.rating3.Source + ": ");
       $("#rating3-val").text(movieObject.rating3.Value);
     }
-    $(".poster-container").append(streamingSection);
-    $(".poster-container").append(movieDetails);
-    $(".poster-container").append(returnSection);
+    $(movieInfo).append(streamingSection);
+    $(movieInfo).append(movieDetails);
+    $(movieInfo).append(returnSection);
 
     // Click events for the detail nav
     $('.poster-container').on("click", "#cast", function () {
@@ -260,14 +263,15 @@ $(".poster-container").on("click", ".list-button", function () {
       info.append(genre);
       $("#genres").text(movieObject.genre);
     });
-    // Click event for the return button
-    $('.poster-container').on("click", "#go-back", function () {
-      $('.poster-container').empty();
-      posterCall();
-      $('#subheading').text("In Theaters Now")
-
-    });
 
   });
+
+});
+
+// Click event for the return button
+$('.poster-container').on("click", "#go-back", function () {
+  $('.poster-container').empty();
+  $('#subheading').text("In Theaters Now");
+  posterCall();
 
 });
