@@ -105,6 +105,12 @@ hr {
   margin-bottom: 85px;
 }
 
+#movie-details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .action-buttons {
   background-color: $accent-color;
   border-radius: 10px;
@@ -146,7 +152,6 @@ hr {
 
   img {
     width: $max;
-    height: $max;
   }
 
   &:hover { // when the user hovers over the poster image show the hidden buttons
@@ -254,4 +259,10 @@ footer {
   font-weight: $primary-weight;
   text-align: center;
   margin-bottom: 0;
+}
+
+// == Media Queries ===========================================================
+
+@media screen and (min-width: 550px) and (max-width: 750px) {
+
 }
