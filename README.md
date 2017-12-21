@@ -43,14 +43,10 @@ tickets.
 ### Process
 A look at what we envisioned the project to look like
 
-![Landing-Page](/assets/images/prototypes/Large\ Desktop:\ Landing Page.png)
-*Landing Page*
+![Landing-Page](/assets/images/prototypes/1.png)
 
-![User's-Lists](/assets/images/prototypes/Large\ Desktop:\ User's List Page.png)
-*User's Saved Lists View*
+![User's-Lists](/assets/images/prototypes/2.png)
 
-![List-Details](assets/images/prototypes/Large\ Desktop:\ List Details.png)
-*List Details*
+![List-Details](assets/images/prototypes/3.png)
 
-![List-Details](assets/images/prototypes/Large\ Desktop:\ Movie Details.png)
-*Movie Detail View*
+![List-Details](assets/images/prototypes/4.png)
