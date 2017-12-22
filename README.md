@@ -20,10 +20,10 @@ user friendly movie database that will give you a short synopsis of a movie,
 provides reviews and provides links to streaming services (if available).
 
 ### Team Efforts
-Apple and Dillon’s responsibility was centered mostly around the front end.
-Dillon introduced the group to SASS, a CSS preprcessor that simplified the task
-of styling the application. Gabe and Kenny were responsible for writing the
-JavaScript that integrated with the API’s we selected.
+Apple and Dillon’s responsibility was centered mostly around the front end and
+click events. Dillon introduced the group to SASS, a CSS preprcessor that
+simplified the task of styling the application. Gabe and Kenny were responsible
+for writing the JavaScript that integrated with the API’s we selected.
 
 ### Challenges
 One of the biggest challenges we found early on was finding a dependable API
